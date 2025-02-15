@@ -1,4 +1,4 @@
-const BASE_URL = "/.netlify-functions/fetchnews"; // Calls Netlify function
+const BASE_URL = "/.netlify/functions/fetchNews"; // Calls Netlify function
 
 async function fetchNews() {
   let query = document.getElementById("search").value.trim();
