@@ -1,5 +1,7 @@
 const API_KEY = "2cb7743b22b64bdf8ff280598b803288"; // Replace with your API key
-const BASE_URL = "https://newsapi.org/v2/everything?apiKey=" + API_KEY;
+const BASE_URL =
+  "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?apiKey=" +
+  API_KEY;
 
 async function fetchNews() {
   let query = document.getElementById("search").value.trim();
