@@ -1,11 +1,8 @@
-const API_KEY = "2cb7743b22b64bdf8ff280598b803288"; // Replace with your API key
-const BASE_URL =
-  "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?apiKey=" +
-  API_KEY;
+const BASE_URL = "/.netlify/functions/fetchNews"; // Calls Netlify function
 
 async function fetchNews() {
   let query = document.getElementById("search").value.trim();
-  let url = `${BASE_URL}&q=${query || "finance"}`; // Corrected URL handling
+  let url = `${BASE_URL}?q=${query || "finance"}`; // ✅ Fixed query parameter
 
   try {
     let response = await fetch(url);
