@@ -3,7 +3,7 @@ const BASE_URL = "https://newsapi.org/v2/everything?apiKey=" + API_KEY;
 
 async function fetchNews() {
   let query = document.getElementById("search").value.trim();
-  let url = `${BASE_URL}&q=${query || "finance"}`; // Corrected URL handling
+  let url = `${BASE_URL}&q=${query || "Armed Conflict Humanitarian Crisis "}`; // Corrected URL handling
 
   try {
     let response = await fetch(url);
